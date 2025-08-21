@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VierasValmis - Helppo siivouspalvelu Airbnb-isännille</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link"><img src="web-bundles/Vierasvalmis_logo_AI.png" alt="VierasValmis Logo" class="logo"></a>
+        <p class="header-text">Hämmästyttävän helppo siivouspalvelu Airbnb-kohteellesi.</p>
+    </header>
+
+    <main class="container">
+        <section id="palvelut">
+            <h2>Palvelupakettimme</h2>
+            <div class="paketit-container">
+                <div class="paketti">
+                    <h3>PIKA</h3>
+                    <p class="hinta">1,20 € / m²</p>
+                    <ul>
+                        <li>Lattioiden imurointi</li>
+                        <li>Lattioiden kostea pyyhintä</li>
+                        <li>Pölyjen pyyhintä vapailta pinnoilta</li>
+                        <li>Peilien ja lasipintojen puhdistus</li>
+                        <li>WC-istuimen ja lavuaarin pesu</li>
+                    </ul>
+                </div>
+                <div class="paketti suosittu">
+                    <h3>PERUS</h3>
+                    <p class="hinta">1,60 € / m²</p>
+                    <ul>
+                        <li>Kaikki PIKA-paketin tehtävät</li>
+                        <li>Vuoteiden petaus ja lakanoiden vaihto</li>
+                        <li>Roskakorien tyhjennys</li>
+                        <li>Keittiön tasojen ja altaan puhdistus</li>
+                        <li>Kodinkoneiden ulkopintojen pyyhintä</li>
+                    </ul>
+                </div>
+                <div class="paketti">
+                    <h3>TÄYSI</h3>
+                    <p class="hinta">2,10 € / m²</p>
+                    <ul>
+                        <li>Kaikki PERUS-paketin tehtävät</li>
+                        <li>Astianpesukoneen täyttö/käynnistys</li>
+                        <li>Suihkun/ammeen ja hanojen puhdistus</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tilaa">
+            <h2>Tilaa siivous</h2>
+            <div class="tilaa-wrapper">
+                <form id="tilaus-lomake" data-netlify="false">
+                    <div class="form-group">
+                        <label for="nimi">Nimi *</label>
+                        <input type="text" id="nimi" name="nimi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Sähköposti *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="puhelin">Puhelinnumero *</label>
+                        <input type="tel" id="puhelin" name="puhelin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="osoite">Kohteen osoite *</label>
+                        <input type="text" id="osoite" name="osoite" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nelio">Neliömäärä (m²) *</label>
+                        <input type="number" id="nelio" name="nelio" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paketti">Valitse palvelupaketti *</label>
+                        <select id="paketti" name="paketti" required>
+                            <option value="">-- Valitse --</option>
+                            <option value="Pika">VierasValmis PIKA</option>
+                            <option value="Perus">VierasValmis PERUS</option>
+                            <option value="Täysi">VierasValmis TÄYSI</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="paiva">Toivottu päivä *</label>
+                        <input type="date" id="paiva" name="paiva" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aikaikkuna">Toivottu aikaikkuna (esim. klo 12-16) *</label>
+                        <input type="text" id="aikaikkuna" name="aikaikkuna" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ohjeet">Sisäänpääsyohjeet *</label>
+                        <textarea id="ohjeet" name="ohjeet" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Lähetä tilaus</button>
+                </form>
+                <div id="hinta-yhteenveto">
+                    <h3>Hinta-arvio</h3>
+                    <p class="hinta-placeholder">Syötä neliöt ja valitse paketti nähdäksesi hinnan.</p>
+                    <div id="laskettu-hinta" class="hinta-summa"></div>
+                </div>
+            </div>
+            <div id="kiitos-viesti" style="display:none;">
+                <h3>Kiitos tilauksestasi!</h3>
+                <p>Olemme vastaanottaneet tilauksesi ja vahvistamme sen sähköpostitse mahdollisimman pian.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VierasValmis</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
